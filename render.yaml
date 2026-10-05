@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: signbridge-backend
+    env: node
+    plan: free
+    nodeVersion: 18.18.2
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: EMAIL_USER
+        sync: false
+      - key: EMAIL_PASS
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
